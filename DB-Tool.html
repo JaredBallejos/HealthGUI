@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>DB Tool</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="DB-Tool.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.1.0, nicepage.com">
+    <link rel="icon" href="images/favicon.png">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "MemeGiving",
+		"logo": "images/Visa_Inc.-Logo.wine.svg"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="DB Tool">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-sticky u-sticky-38cc u-white u-header" id="sec-259a"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="800">
+          <img src="images/Visa_Inc.-Logo.wine.svg" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://healthcheck.com" style="padding: 10px 0px;">Healthcheck</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="DB-Tool.html" style="padding: 10px 0px;">DB Tool</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="API-Response-Tool.html" style="padding: 10px 0px;">API Response Tool</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://healthcheck.com" style="padding: 10px 0px;">Healthcheck</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="DB-Tool.html" style="padding: 10px 0px;">DB Tool</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="API-Response-Tool.html" style="padding: 10px 0px;">API Response Tool</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-image u-section-1" id="sec-d788" data-image-width="150" data-image-height="99">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-palette-1-base u-radius-20 u-shape u-shape-round u-shape-1"></div>
+        <img class="u-image u-image-round u-radius-20 u-image-1" src="images/a9d99bdc49eb2586766ba9cfbe305c0d7f5ef2a89eba42db7dc2bd054d089a367c0276d4544ff8c15bcefa25e4619a15115dc0036d860e8a29d459_12801.jpg" data-image-width="1280" data-image-height="1918">
+        <div class="u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <h3 class="u-text u-text-body-alt-color u-text-default u-text-1"><u> CDISI DB Tool&nbsp;</u>
+              <br>
+            </h3>
+            <p class="u-text u-text-body-alt-color u-text-2">Use this tool to execute SQL statements and failover applications for any kind of maintenance.&nbsp; This tool provides an alternative to Citrix in the event that Citrix freezes and cannot be accessed (a frequent occurence)<br>
+            </p>
+            <a href="https://nicepage.online" class="u-active-white u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-1">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-121b">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
+          <ul class="u-spacing-5 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">CDIOCC</a>
+            </li>
+            <li class="u-tab-item u-tab-item-2" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-2" id="link-tab-5988" href="#tab-5988" role="tab" aria-controls="tab-5988" aria-selected="false">CDIOCE</a>
+            </li>
+            <li class="u-tab-item u-tab-item-3" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-3" id="link-tab-8f87" href="#tab-8f87" role="tab" aria-controls="tab-8f87" aria-selected="false">CDIOCIM</a>
+            </li>
+            <li class="u-tab-item u-tab-item-4" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-4" id="link-tab-6816" href="#tab-6816" role="tab" aria-controls="tab-6816" aria-selected="false">CDIOCIB</a>
+            </li>
+            <li class="u-tab-item u-tab-item-5" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-5" id="link-tab-7a23" href="#tab-7a23" role="tab" aria-controls="tab-7a23" aria-selected="false">MSMLOCC<br>
+              </a>
+            </li>
+            <li class="u-tab-item u-tab-item-6" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-6" id="link-tab-bb91" href="#tab-bb91" role="tab" aria-controls="tab-bb91" aria-selected="false">MSMLOCE<br>
+              </a>
+            </li>
+            <li class="u-tab-item u-tab-item-7" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-7" id="link-tab-c8ba" href="#tab-c8ba" role="tab" aria-controls="tab-c8ba" aria-selected="false">STMPOCC<br>
+              </a>
+            </li>
+            <li class="u-tab-item u-tab-item-8" role="presentation">
+              <a class="u-active-grey-10 u-button-style u-tab-link u-text-active-black u-text-black u-tab-link-8" id="link-tab-6bfa" href="#tab-6bfa" role="tab" aria-controls="tab-6bfa" aria-selected="false">STMPOCE<br>
+              </a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-grey-10 u-tab-active u-tab-pane u-tab-pane-1" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-default u-text-1">CDISI OCC Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-1">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-724c"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-724c"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-2">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-1">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-2">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-3">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-4">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-5">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-6">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-7">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-8">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-9">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-2">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e880"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e880"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-2" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-3">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-10">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-11">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-12">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-13">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-14">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-15">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-16">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-17">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-18">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-3">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-79e7"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-79e7"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-3" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-4">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-19">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-20">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-21">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-22">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-1">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-23">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-2" id="tab-5988" role="tabpanel" aria-labelledby="link-tab-5988">
+              <div class="u-container-layout u-container-layout-5">
+                <h4 class="u-text u-text-default u-text-2">CDISI OCE Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-2">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5a10"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5a10"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-4" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-6">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-24">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-25">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-26">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-27">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-28">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-29">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-30">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-31">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-32">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-5">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d3bf"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d3bf"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-5" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-7">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-33">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-34">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-35">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-36">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-37">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-38">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-39">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-40">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-41">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-6">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2ad1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2ad1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-6" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-8">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-42">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-43">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-44">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-45">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-2">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-46">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-3" id="tab-8f87" role="tabpanel" aria-labelledby="link-tab-8f87">
+              <div class="u-container-layout u-container-layout-9">
+                <h4 class="u-text u-text-default u-text-3">CDISI OCIM Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-3">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9ecb"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-9ecb"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-7" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-10">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-47">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-48">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-49">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-50">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-51">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-52">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-53">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-54">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-55">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-8">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a7ae"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-a7ae"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-8" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-11">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-56">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-57">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-58">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-59">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-60">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-61">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-62">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-63">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-64">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-9">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e90b"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e90b"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-9" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-12">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-65">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-66">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-67">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-68">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-3">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-69">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-4" id="tab-6816" role="tabpanel" aria-labelledby="link-tab-6816">
+              <div class="u-container-layout u-container-layout-13">
+                <h4 class="u-text u-text-default u-text-4">CDISI OCIB Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-4">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f846"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-f846"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-10" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-14">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-70">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-71">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-72">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-73">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-74">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-75">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-76">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-77">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-78">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-11">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-11"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-edf1"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-edf1"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-11" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-15">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-79">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-80">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-81">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-82">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-83">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-84">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-85">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-86">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-87">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-12">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-12"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-dadf"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-dadf"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-12" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-16">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-88">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-89">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-90">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-91">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-4">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-92">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-5" id="tab-7a23" role="tabpanel" aria-labelledby="link-tab-7a23">
+              <div class="u-container-layout u-container-layout-17">
+                <h4 class="u-text u-text-default u-text-5">MSML OCC Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-5">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-13"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-77e2"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-77e2"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-13" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-18">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-93">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-94">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-95">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-96">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-97">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-98">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-99">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-100">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-101">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-14">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-14"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-08cf"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-08cf"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-14" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-19">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-102">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-103">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-104">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-105">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-106">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-107">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-108">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-109">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-110">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-15">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-15"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-07bd"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-07bd"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-15" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-20">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-111">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-112">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-113">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-114">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-5">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-115">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-6" id="tab-bb91" role="tabpanel" aria-labelledby="link-tab-bb91">
+              <div class="u-container-layout u-container-layout-21">
+                <h4 class="u-text u-text-default u-text-6">MSML OCE Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-6">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-16"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3b0f"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-3b0f"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-16" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-22">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-116">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-117">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-118">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-119">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-120">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-121">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-122">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-123">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-124">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-17">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-17"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c719"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-c719"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-17" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-23">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-125">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-126">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-127">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-128">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-129">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-130">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-131">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-132">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-133">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-18">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-18"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d5b8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d5b8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-18" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-24">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-134">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-135">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-136">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-137">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-6">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-138">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-7" id="tab-c8ba" role="tabpanel" aria-labelledby="link-tab-c8ba">
+              <div class="u-container-layout u-container-layout-25">
+                <h4 class="u-text u-text-default u-text-7">Stamping OCC Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-7">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-19"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-78b8"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-78b8"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-19" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-26">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-139">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-140">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-141">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-142">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-143">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-144">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-145">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-146">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-147">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-20">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-20"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e376"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-e376"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-20" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-27">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-148">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-149">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-150">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-151">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-152">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-153">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-154">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-155">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-156">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-21">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-21"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1afa"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-1afa"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-21" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-28">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-157">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-158">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-159">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-160">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-7">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-161">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-grey-10 u-tab-pane u-tab-pane-8" id="tab-6bfa" role="tabpanel" aria-labelledby="link-tab-6bfa">
+              <div class="u-container-layout u-container-layout-29">
+                <h4 class="u-text u-text-default u-text-8">Stamping OCE Connection</h4>
+                <div class="u-accordion u-expanded-width u-accordion-8">
+                  <div class="u-accordion-item">
+                    <a class="active u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="true">
+                      <span class="u-accordion-link-text">Quick SQL: Audit &amp; Monitoring</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-22"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d4c4"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-d4c4"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-22" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-30">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-162">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-163">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-164">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-165">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-166">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-167">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-168">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-169">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-170">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-23">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-f1c2" aria-controls="f1c2" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Failover</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-23"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2ded"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2ded"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-23" id="f1c2" aria-labelledby="link-f1c2">
+                      <div class="u-container-layout u-valign-top u-container-layout-31">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-171">Failover DTRS to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-172">Failover Starpay to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-173">Failover Starpay to OCC</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-174">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-175">Failover DTRS to OCE<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-176">Failover VTOS to OCC &amp; VEPSS/VTOSAPI to OCE</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-177">Failover ODS to OCC<br>
+                        </a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-178">Delete Hung Entry Availability Process</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-179">Failover ODS to OCE<br>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-accordion-item u-accordion-item-24">
+                    <a class="u-accordion-link u-border-1 u-border-grey-75 u-button-style" id="link-c08e" aria-controls="c08e" aria-selected="false">
+                      <span class="u-accordion-link-text">Quick SQL: Miscellaneous</span><span class="u-accordion-link-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-text-white u-icon-24"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3589"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-3589"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-accordion-pane-24" id="c08e" aria-labelledby="link-c08e">
+                      <div class="u-container-layout u-container-layout-32">
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-180">Get Backend Query (Custom Web Service)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-181">Check Cron Job (GADATABIGQ)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-182">List Error Codes (tsic_svc_sta)</a>
+                        <a href="https://nicepage.com/k/youtube-website-templates" class="u-btn u-btn-round u-button-style u-radius-20 u-btn-183">Get Backend URL (load balancer table)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-expanded-width u-form u-form-8">
+                  <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-message">
+                      <label for="message-b711" class="u-form-control-hidden u-label"></label>
+                      <textarea placeholder="Enter your SQL here..." rows="4" cols="50" id="message-b711" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-20 u-white" required=""></textarea>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-20 u-btn-184">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-valign-middle u-section-3" id="carousel_073e">
+      <h2 class="u-align-center u-text u-text-palette-1-base u-text-1">Result Set</h2>
+      <p class="u-align-center u-text u-text-2">To download results as a CSV file, <u>click here</u>.
+      </p>
+      <div class="u-expanded-width u-table u-table-responsive u-table-1">
+        <table class="u-table-entity">
+          <colgroup>
+            <col width="6.6%">
+            <col width="6.6%">
+            <col width="6.6%">
+            <col width="6.6%">
+            <col width="6.6%">
+            <col width="6.8%">
+            <col width="6.6%">
+            <col width="7%">
+            <col width="6.6%">
+            <col width="6.8%">
+            <col width="6.4%">
+            <col width="6.6%">
+            <col width="6.7%">
+            <col width="6.499999999999995%">
+            <col width="7.099999999999994%">
+          </colgroup>
+          <thead class="u-palette-1-base u-table-header u-table-header-1">
+            <tr style="height: 46px;">
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Column 1</th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Column 2</th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Column 3</th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell">Column 4</th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+              <th class="u-border-1 u-border-grey-dark-1 u-table-cell"></th>
+            </tr>
+          </thead>
+          <tbody class="u-table-alt-grey-5 u-table-body">
+            <tr style="height: 51px;">
+              <td class="u-table-cell">Row 1</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+            </tr>
+            <tr style="height: 51px;">
+              <td class="u-table-cell">Row 2</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+            </tr>
+            <tr style="height: 51px;">
+              <td class="u-table-cell">Row 3</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+            </tr>
+            <tr style="height: 52px;">
+              <td class="u-table-cell">Row 4</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell">Description</td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+              <td class="u-table-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <footer class="u-clearfix u-footer u-white" id="sec-e891"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1.125rem;">
+            <a class="u-button-style u-custom-text-color u-custom-text-decoration u-nav-link" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-1-base" href="https://healthcheck.com" style="text-decoration: underline !important;">Healthcheck</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-1-base" href="DB-Tool.html" style="text-decoration: underline !important;">DB Tool</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-palette-1-base" href="https://apiresponse.com" style="text-decoration: underline !important;">API Response Tool</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://healthcheck.com" style="text-decoration: underline !important;">Healthcheck</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="DB-Tool.html" style="text-decoration: underline !important;">DB Tool</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://apiresponse.com" style="text-decoration: underline !important;">API Response Tool</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></footer>
+  </body>
+</html>
