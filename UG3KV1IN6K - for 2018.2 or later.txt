@@ -1,0 +1,322 @@
+@@ -1,321 +0,0 @@
+
+
+var flag = 0;
+$(window).scroll(function () {
+    // End of the document reached?
+    if (($(document).height() - $(this).height() - 50 < $(this).scrollTop()) && flag == 0) {
+        if (flag == 0){
+            $.ajax({
+                url: "scrollsavedposts",
+                success: function (posts) {
+                    console.log(posts.toString());
+                    $.each(posts.reverse(), function (index, post) {
+                        if (post.post_id == null) {
+                            flag = 1;
+                        } else {
+                            if(post.image_count == 5){
+                                $("#footer".toString()).prepend("<section class=\"u-clearfix u-section-1\" id=\"sec-93e7\">\n" +
+                                    "      <div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\"><!--product--><!--product_options_json--><!--{\"source\":\"\"}--><!--/product_options_json--><!--product_item-->\n" +
+                                    "        <div class=\"u-border-2 u-border-grey-75 u-container-style u-expanded-width u-product u-shape-rectangle u-product-1\">\n" +
+                                    "          <div class=\"u-container-layout u-valign-middle-xl u-container-layout-1\"><!--product_gallery--><!--options_json--><!--{\"maxItems\":\"\"}--><!--/options_json-->\n" +
+                                    "            <div class=\"pointer-event u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-product-control u-show-text-on-hover u-thumbnails-position-top u-gallery-1\" data-interval=\"5000\" data-u-ride=\"carousel\" id=\"carousel-0c74\">\n" +
+                                    "              <div id=\"" + post.post_id + "\" class=\"u-carousel-inner u-gallery-inner carousel\" role=\"listbox\"><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-1.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-2.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-3.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-4.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-5.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "              </div>\n" +
+                                    "              <a onclick=\"prevImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-1 prev\" role=\"button\" data-u-slide=\"prev\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "              <a onclick=\"nextImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-2 next\" role=\"button\" data-u-slide=\"next\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "            </div><!--/product_gallery--><!--product_title-->\n" +
+                                    "            <h2 class=\"u-align-left u-product-control u-text u-text-1\">\n" +
+                                    "              <a class=\"u-product-title-link\" href=\"viewpost?post_id=" + post.post_id + "\">$"+post.ask_price+"|"+post.litecoin_price.toFixed(3)+" LTC</a>\n" +
+                                    "            </h2><!--/product_title--><!--product_price-->\n" +
+                                    "<div class=\"u-product-control u-product-price u-product-price-1\">\n" +
+                                    "<div class=\"u-price-wrapper u-spacing-10\"><!--product_old_price-->\n" +
+                                    "<div class=\"u-hide-price u-old-price\" style=\"text-decoration: line-through !important;\"></div><!--/product_old_price--><!--product_regular_price-->\n" +
+                                    "<div class=\"u-price u-text-palette-2-base\" style=\"font-size: 1.875rem; font-weight: 300;\">Wallet Balance: "+post.wallet_balance+" LTC</div><!--/product_regular_price-->\n" +
+                                    "</div>\n" +
+                                    "</div>\n" +
+                                    "            <div class=\"u-align-left u-product-control u-product-desc u-text u-text-2\"><!--product_content_content-->\n" +
+                                    "              <p>" + post.post_description + "</p><!--/product_content_content-->\n" +
+                                    "            </div><!--/product_content--><!--product_button--><!--options_json--><!--{\"clickType\":\"go-to-page\",\"content\":\"\"}--><!--/options_json-->\n" +
+                                    "            <a id=\"saved" + post.post_id + "\" onclick=\"removepost('" + post.post_id + "')\" class=\"u-border-2 u-border-black u-btn u-btn-round u-button-style u-grey-80 u-radius-50 u-text-hover-white u-text-white u-btn-1\">Remove Post</a>\n" +
+                                    "          </div>\n" +
+                                    "        </div><!--/product_item--><!--/product-->\n" +
+                                    "      </div>\n" +
+                                    "    </section>");
+                            }
+                            else if(post.image_count == 4){
+                                $("#footer".toString()).prepend("<section class=\"u-clearfix u-section-1\" id=\"sec-93e7\">\n" +
+                                    "      <div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\"><!--product--><!--product_options_json--><!--{\"source\":\"\"}--><!--/product_options_json--><!--product_item-->\n" +
+                                    "        <div class=\"u-border-2 u-border-grey-75 u-container-style u-expanded-width u-product u-shape-rectangle u-product-1\">\n" +
+                                    "          <div class=\"u-container-layout u-valign-middle-xl u-container-layout-1\"><!--product_gallery--><!--options_json--><!--{\"maxItems\":\"\"}--><!--/options_json-->\n" +
+                                    "            <div class=\"pointer-event u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-product-control u-show-text-on-hover u-thumbnails-position-top u-gallery-1\" data-interval=\"5000\" data-u-ride=\"carousel\" id=\"carousel-0c74\">\n" +
+                                    "              <div id=\"" + post.post_id + "\" class=\"u-carousel-inner u-gallery-inner carousel\" role=\"listbox\"><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-1.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-2.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-3.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-4.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "              </div>\n" +
+                                    "              <a onclick=\"prevImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-1 prev\" role=\"button\" data-u-slide=\"prev\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "              <a onclick=\"nextImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-2 next\" role=\"button\" data-u-slide=\"next\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "            </div><!--/product_gallery--><!--product_title-->\n" +
+                                    "            <h2 class=\"u-align-left u-product-control u-text u-text-1\">\n" +
+                                    "              <a class=\"u-product-title-link\" href=\"viewpost?post_id=" + post.post_id + "\">$"+post.ask_price+"|"+post.litecoin_price.toFixed(3)+" LTC</a>\n" +
+                                    "            </h2><!--/product_title--><!--product_price-->\n" +
+                                    "<div class=\"u-product-control u-product-price u-product-price-1\">\n" +
+                                    "<div class=\"u-price-wrapper u-spacing-10\"><!--product_old_price-->\n" +
+                                    "<div class=\"u-hide-price u-old-price\" style=\"text-decoration: line-through !important;\"></div><!--/product_old_price--><!--product_regular_price-->\n" +
+                                    "<div class=\"u-price u-text-palette-2-base\" style=\"font-size: 1.875rem; font-weight: 300;\">Wallet Balance: "+post.wallet_balance+" LTC</div><!--/product_regular_price-->\n" +
+                                    "</div>\n" +
+                                    "</div>\n" +
+                                    "            <div class=\"u-align-left u-product-control u-product-desc u-text u-text-2\"><!--product_content_content-->\n" +
+                                    "              <p>" + post.post_description + "</p><!--/product_content_content-->\n" +
+                                    "            </div><!--/product_content--><!--product_button--><!--options_json--><!--{\"clickType\":\"go-to-page\",\"content\":\"\"}--><!--/options_json-->\n" +
+                                    "            <a id=\"saved" + post.post_id + "\" onclick=\"removepost('" + post.post_id + "')\" class=\"u-border-2 u-border-black u-btn u-btn-round u-button-style u-grey-80 u-radius-50 u-text-hover-white u-text-white u-btn-1\">Remove Post</a>\n" +
+                                    "          </div>\n" +
+                                    "        </div><!--/product_item--><!--/product-->\n" +
+                                    "      </div>\n" +
+                                    "    </section>");
+                            }
+                            else if(post.image_count == 3){
+                                $("#footer".toString()).prepend("<section class=\"u-clearfix u-section-1\" id=\"sec-93e7\">\n" +
+                                    "      <div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\"><!--product--><!--product_options_json--><!--{\"source\":\"\"}--><!--/product_options_json--><!--product_item-->\n" +
+                                    "        <div class=\"u-border-2 u-border-grey-75 u-container-style u-expanded-width u-product u-shape-rectangle u-product-1\">\n" +
+                                    "          <div class=\"u-container-layout u-valign-middle-xl u-container-layout-1\"><!--product_gallery--><!--options_json--><!--{\"maxItems\":\"\"}--><!--/options_json-->\n" +
+                                    "            <div class=\"pointer-event u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-product-control u-show-text-on-hover u-thumbnails-position-top u-gallery-1\" data-interval=\"5000\" data-u-ride=\"carousel\" id=\"carousel-0c74\">\n" +
+                                    "              <div id=\"" + post.post_id + "\" class=\"u-carousel-inner u-gallery-inner carousel\" role=\"listbox\"><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-1.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-2.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-3.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "              </div>\n" +
+                                    "              <a onclick=\"prevImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-1 prev\" role=\"button\" data-u-slide=\"prev\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "              <a onclick=\"nextImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-2 next\" role=\"button\" data-u-slide=\"next\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "            </div><!--/product_gallery--><!--product_title-->\n" +
+                                    "            <h2 class=\"u-align-left u-product-control u-text u-text-1\">\n" +
+                                    "              <a class=\"u-product-title-link\" href=\"viewpost?post_id=" + post.post_id + "\">$"+post.ask_price+"|"+post.litecoin_price.toFixed(3)+" LTC</a>\n" +
+                                    "            </h2><!--/product_title--><!--product_price-->\n" +
+                                    "<div class=\"u-product-control u-product-price u-product-price-1\">\n" +
+                                    "<div class=\"u-price-wrapper u-spacing-10\"><!--product_old_price-->\n" +
+                                    "<div class=\"u-hide-price u-old-price\" style=\"text-decoration: line-through !important;\"></div><!--/product_old_price--><!--product_regular_price-->\n" +
+                                    "<div class=\"u-price u-text-palette-2-base\" style=\"font-size: 1.875rem; font-weight: 300;\">Wallet Balance: "+post.wallet_balance+" LTC</div><!--/product_regular_price-->\n" +
+                                    "</div>\n" +
+                                    "</div>\n" +
+                                    "            <div class=\"u-align-left u-product-control u-product-desc u-text u-text-2\"><!--product_content_content-->\n" +
+                                    "              <p>" + post.post_description + "</p><!--/product_content_content-->\n" +
+                                    "            </div><!--/product_content--><!--product_button--><!--options_json--><!--{\"clickType\":\"go-to-page\",\"content\":\"\"}--><!--/options_json-->\n" +
+                                    "            <a id=\"saved" + post.post_id + "\" onclick=\"removepost('" + post.post_id + "')\" class=\"u-border-2 u-border-black u-btn u-btn-round u-button-style u-grey-80 u-radius-50 u-text-hover-white u-text-white u-btn-1\">Remove Post</a>\n" +
+                                    "          </div>\n" +
+                                    "        </div><!--/product_item--><!--/product-->\n" +
+                                    "      </div>\n" +
+                                    "    </section>");
+                            }
+                            else if(post.image_count == 2){
+                                $("#footer".toString()).prepend("<section class=\"u-clearfix u-section-1\" id=\"sec-93e7\">\n" +
+                                    "      <div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\"><!--product--><!--product_options_json--><!--{\"source\":\"\"}--><!--/product_options_json--><!--product_item-->\n" +
+                                    "        <div class=\"u-border-2 u-border-grey-75 u-container-style u-expanded-width u-product u-shape-rectangle u-product-1\">\n" +
+                                    "          <div class=\"u-container-layout u-valign-middle-xl u-container-layout-1\"><!--product_gallery--><!--options_json--><!--{\"maxItems\":\"\"}--><!--/options_json-->\n" +
+                                    "            <div class=\"pointer-event u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-product-control u-show-text-on-hover u-thumbnails-position-top u-gallery-1\" data-interval=\"5000\" data-u-ride=\"carousel\" id=\"carousel-0c74\">\n" +
+                                    "              <div id=\"" + post.post_id + "\" class=\"u-carousel-inner u-gallery-inner carousel\" role=\"listbox\"><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-1.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-2.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "              </div>\n" +
+                                    "              <a onclick=\"prevImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-1 prev\" role=\"button\" data-u-slide=\"prev\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "              <a onclick=\"nextImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-2 next\" role=\"button\" data-u-slide=\"next\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "            </div><!--/product_gallery--><!--product_title-->\n" +
+                                    "            <h2 class=\"u-align-left u-product-control u-text u-text-1\">\n" +
+                                    "              <a class=\"u-product-title-link\" href=\"viewpost?post_id=" + post.post_id + "\">$"+post.ask_price+"|"+post.litecoin_price.toFixed(3)+" LTC</a>\n" +
+                                    "            </h2><!--/product_title--><!--product_price-->\n" +
+                                    "<div class=\"u-product-control u-product-price u-product-price-1\">\n" +
+                                    "<div class=\"u-price-wrapper u-spacing-10\"><!--product_old_price-->\n" +
+                                    "<div class=\"u-hide-price u-old-price\" style=\"text-decoration: line-through !important;\"></div><!--/product_old_price--><!--product_regular_price-->\n" +
+                                    "<div class=\"u-price u-text-palette-2-base\" style=\"font-size: 1.875rem; font-weight: 300;\">Wallet Balance: "+post.wallet_balance+" LTC</div><!--/product_regular_price-->\n" +
+                                    "</div>\n" +
+                                    "</div>\n" +
+                                    "            <div class=\"u-align-left u-product-control u-product-desc u-text u-text-2\"><!--product_content_content-->\n" +
+                                    "              <p>" + post.post_description + "</p><!--/product_content_content-->\n" +
+                                    "            </div><!--/product_content--><!--product_button--><!--options_json--><!--{\"clickType\":\"go-to-page\",\"content\":\"\"}--><!--/options_json-->\n" +
+                                    "            <a id=\"saved" + post.post_id + "\" onclick=\"removepost('" + post.post_id + "')\" class=\"u-border-2 u-border-black u-btn u-btn-round u-button-style u-grey-80 u-radius-50 u-text-hover-white u-text-white u-btn-1\">Remove Post</a>\n" +
+                                    "          </div>\n" +
+                                    "        </div><!--/product_item--><!--/product-->\n" +
+                                    "      </div>\n" +
+                                    "    </section>");
+                            }
+                            else {
+                                console.log("image_count=1");
+                                $("#footer".toString()).prepend("<section class=\"u-clearfix u-section-1\" id=\"sec-93e7\">\n" +
+                                    "      <div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\"><!--product--><!--product_options_json--><!--{\"source\":\"\"}--><!--/product_options_json--><!--product_item-->\n" +
+                                    "        <div class=\"u-border-2 u-border-grey-75 u-container-style u-expanded-width u-product u-shape-rectangle u-product-1\">\n" +
+                                    "          <div class=\"u-container-layout u-valign-middle-xl u-container-layout-1\"><!--product_gallery--><!--options_json--><!--{\"maxItems\":\"\"}--><!--/options_json-->\n" +
+                                    "            <div class=\"pointer-event u-carousel u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-product-control u-show-text-on-hover u-thumbnails-position-top u-gallery-1\" data-interval=\"5000\" data-u-ride=\"carousel\" id=\"carousel-0c74\">\n" +
+                                    "              <div id=\"" + post.post_id + "\" class=\"u-carousel-inner u-gallery-inner carousel\" role=\"listbox\"><!--product_gallery_item-->\n" +
+                                    "                <div class=\"u-back-slide u-carousel-item u-effect-fade u-gallery-item u-shape-rectangle u-active\">\n" +
+                                    "                    <img class=\"u-back-image u-expanded\" src=\"https://lightcub-images-us-east-1-1.s3.amazonaws.com/" + post.post_id + "\">\n" +
+                                    "                </div><!--/product_gallery_item--><!--product_gallery_item-->\n" +
+                                    "              </div>\n" +
+                                    "              <a onclick=\"prevImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-1 prev\" role=\"button\" data-u-slide=\"prev\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.847 451.847\"><path d=\"M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0\n" +
+                                    "c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744\n" +
+                                    "c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "              <a onclick=\"nextImage('" + post.post_id + "')\" class=\"u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-rectangle u-opacity u-opacity-70 u-spacing-10 u-text-hover-grey-80 u-white u-carousel-control-2 next\" role=\"button\" data-u-slide=\"next\">\n" +
+                                    "                <span aria-hidden=\"true\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "                <span class=\"sr-only\">\n" +
+                                    "                  <svg viewBox=\"0 0 451.846 451.847\"><path d=\"M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744\n" +
+                                    "L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284\n" +
+                                    "c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z\"></path></svg>\n" +
+                                    "                </span>\n" +
+                                    "              </a>\n" +
+                                    "            </div><!--/product_gallery--><!--product_title-->\n" +
+                                    "            <h2 class=\"u-align-left u-product-control u-text u-text-1\">\n" +
+                                    "              <a class=\"u-product-title-link\" href=\"viewpost?post_id=" + post.post_id + "\">$"+post.ask_price+"|"+post.litecoin_price.toFixed(3)+" LTC</a>\n" +
+                                    "            </h2><!--/product_title--><!--product_price-->\n" +
+                                    "<div class=\"u-product-control u-product-price u-product-price-1\">\n" +
+                                    "<div class=\"u-price-wrapper u-spacing-10\"><!--product_old_price-->\n" +
+                                    "<div class=\"u-hide-price u-old-price\" style=\"text-decoration: line-through !important;\"></div><!--/product_old_price--><!--product_regular_price-->\n" +
+                                    "<div class=\"u-price u-text-palette-2-base\" style=\"font-size: 1.875rem; font-weight: 300;\">Wallet Balance: "+post.wallet_balance+" LTC</div><!--/product_regular_price-->\n" +
+                                    "</div>\n" +
+                                    "</div>\n" +
+                                    "            <div class=\"u-align-left u-product-control u-product-desc u-text u-text-2\"><!--product_content_content-->\n" +
+                                    "              <p>" + post.post_description + "</p><!--/product_content_content-->\n" +
+                                    "            </div><!--/product_content--><!--product_button--><!--options_json--><!--{\"clickType\":\"go-to-page\",\"content\":\"\"}--><!--/options_json-->\n" +
+                                    "            <a id=\"saved" + post.post_id + "\" onclick=\"removepost('" + post.post_id + "')\" class=\"u-border-2 u-border-black u-btn u-btn-round u-button-style u-grey-80 u-radius-50 u-text-hover-white u-text-white u-btn-1\">Remove Post</a>\n" +
+                                    "          </div>\n" +
+                                    "        </div><!--/product_item--><!--/product-->\n" +
+                                    "      </div>\n" +
+                                    "    </section>");
+                            }
+                        }});},
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+                    console.log('Error: ' + errorMessage);
+                    alert("Failed to Save Post");
+                }});}}});
